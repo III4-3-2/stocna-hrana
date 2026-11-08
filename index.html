@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Imprima&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="shortcut icon" href="./img/logo1.png" type="image/x-icon">
+    <title>Zlatno Zrno</title>
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <img src="./img/logo1.png" alt="logo">
+        </div>
+        <div class="ime">
+            <h4>Zlatno Zrno</h4>
+            <p>Stočna hrana</p>
+        </div>
+        <div class="login">
+            <i data-lucide="user-round"></i>
+            <a href="#">Uloguj se</a>
+            <p>/</p>
+            <a href="#">Registruj se</a>
+            <i data-lucide="shopping-cart"></i>
+        </div>
+    </header>
+    <nav>
+        <a href="#" class="active">Početna</a>
+        <a href="#">Proizvodi</a>
+        <a href="#">Kategorije</a>
+        <a href="#">Dobavljači</a>
+        <a href="#">Kontakt</a>
+    </nav>
+
+    <section id="carousel">
+        <div class="carousel">
+            <div class="slide active">
+                <img src="./img/carousel1.png" alt="slika 1">
+            </div>
+            <div class="slide">
+                <img src="./img/carousel2.jpg" alt="Slika 2">
+            </div>
+        </div>
+
+        <div class="hero-card">
+            <h1>Kvalitetna stočna hrana za zdravlje životinje</h1>
+            <p>Pružamo pouzdane proizvode na bolje uslove za razvoj vaše životinje</p>
+            <a href="#" class="dugme">Pogledajte ovde <i data-lucide="arrow-right"></i></a>
+        </div>
+
+        <button class="strelica prev" aria-label="Prethodni"><i data-lucide="chevron-left"></i></button>
+        <button class="strelica next" aria-label="Sledeći"><i data-lucide="chevron-right"></i></button>
+
+        <div class="dots">
+            <span class="dot active"></span>
+            <span class="dot"></span>
+        </div>
+    </section>
+
+    <section class="bestseller">
+        <h3>
+            Najprodavanije
+        </h3>
+        <div class="card">
+            <img src="./img/koncentrat govedina.jpg" alt="koncentrat govedina">
+            <p>
+                Peletirana stočna hrana za goveda (25kg)
+            </p>
+            <p>
+                1,450 RSD
+            </p>
+            <i data-lucide="plus" class="plus"></i>
+        </div>
+        <div class="card">
+            <img src="./img/kukuruz.webp" alt="kukuruzi">
+            <p>
+                Kukuruz (25kg)
+            </p>
+            <p>
+                1,200 RSD
+            </p>
+            <i data-lucide="plus" class="plus"></i>
+        </div>
+        <div class="card">
+            <img src="./img/koncentrat.webp" alt="koncentrat svinja">
+            <p>
+                Peletirana stočna hrana za svinje (25kg)
+            </p>
+            <p>
+                1,350 RSD
+            </p>
+            <i data-lucide="plus" class="plus"></i>
+        </div>
+        <div class="card">
+            <img src="./img/seno.jpg" alt="seno">
+            <p>
+                Seno (Bala od 20kg)
+            </p>
+            <p>
+                890 RSD
+            </p>
+            <i data-lucide="plus" class="plus"></i>
+        </div>
+    </section>
+
+    <section class="about">
+        <div class="left">
+            <img src="./img/kuca.jpg" alt="kuca">
+        </div>
+        <div class="right">
+            <h3>
+                O nama
+            </h3>
+            <p>
+                Zlatno Zrno je posvećen kvalitetnoj stočnoj hrani
+                koja doprinosi zdravlju i pravilnom razvoju vaših životinja.
+                Naš cilj je da poljoprivrednim proizvođačima pružimo pouzdane proizvode,
+                kvalitetnu uslugu i sve što im je potrebno za uspešno gazdinstvo.
+            </p>
+            <div class="btn">
+                <button>
+                    Saznaj više
+                    <i data-lucide="arrow-right"></i>
+                </button>
+            </div>
+        </div>
+    </section>
+    
+    <section class="category">
+        <h3>Kategorije</h3>
+        <div class="ccard">
+            <img src="./img/KRAVA1.png" alt="KRAVA1">
+            <h4>Goveda</h4>
+        </div>
+        <div class="ccard">
+            <img src="./img/SVINJA1.png" alt="SVINJA1">
+            <h4>Svinja</h4>
+        </div>
+        <div class="ccard">
+            <img src="./img/kokoska1.png" alt="kokoska1">
+            <h4>Perad</h4>
+        </div>
+        <div class="ccard">
+            <img src="./img/OVCA1.png" alt="OVCA1">
+            <h4>Ovce i koze</h4>
+        </div>
+    </section>
+    
+    <section class="partner">
+        <h3>
+            Naši Dobavljači
+        </h3>
+        <img src="./img/partner1.png" alt="partner 1">
+        <img src="./img/partner2.jfif" alt="partner 2">
+        <img src="./img/partner3.png" alt="partner 3">
+        <img src="./img/partner4.png" alt="partner 4">
+        <img src="./img/partner5.png" alt="partner 5">
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Zlatno Zrno. Sva prava zadržana</p>
+    </footer>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+        lucide.createIcons();
+    </script>
+    <script src="./scripts.js"></script>
+</body>
+
+</html>
