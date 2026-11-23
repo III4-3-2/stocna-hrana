@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Imprima&display=swap" rel="stylesheet">
@@ -23,10 +24,14 @@
         </div>
         <div class="login">
             <i data-lucide="user-round"></i>
-            <a href="#">Uloguj se</a>
+            <a href="#" data-open="login-modal">Uloguj se</a>
             <p>/</p>
-            <a href="#">Registruj se</a>
-            <i data-lucide="shopping-cart"></i>
+            <a href="#" data-open="signup-modal">Registruj se</a>
+            <!-- <a href="#" data-open="cart-dialog"><i data-lucide="shopping-cart"></i></a> -->
+            <a href="#" class="cart" data-open="cart-dialog">
+                <i data-lucide="shopping-cart"></i>
+                <span class="cart-badge" id="cart-badge">0</span>
+            </a>
         </div>
     </header>
     <nav>
@@ -130,7 +135,7 @@
             </div>
         </div>
     </section>
-    
+
     <section class="category">
         <h3>Kategorije</h3>
         <div class="ccard">
@@ -150,7 +155,7 @@
             <h4>Ovce i koze</h4>
         </div>
     </section>
-    
+
     <section class="partner">
         <h3>
             Naši Dobavljači
@@ -165,6 +170,69 @@
     <footer>
         <p>&copy; 2026 Zlatno Zrno. Sva prava zadržana</p>
     </footer>
+
+    <dialog id="login-modal" class="modal">
+        <button class="modal-close" data-close aria-label="Zatvori"><i data-lucide="x"></i></button>
+        <div class="modal-head">
+            <img src="./img/logo1.png" alt="logo">
+            <h3>Uloguj se</h3>
+        </div>
+        <form>
+            <div class="polje">
+                <i data-lucide="mail"></i>
+                <input type="email" placeholder="e-mail" required>
+            </div>
+            <div class="polje">
+                <i data-lucide="lock"></i>
+                <input type="password" placeholder="lozinka" required>
+            </div>
+            <button type="submit" class="modal-btn">Nastavi</button>
+        </form>
+    </dialog>
+
+    <dialog id="signup-modal" class="modal">
+        <button class="modal-close" data-close aria-label="Zatvori"><i data-lucide="x"></i></button>
+        <div class="modal-head">
+            <img src="./img/logo1.png" alt="logo">
+            <h3>Registruj se</h3>
+        </div>
+        <form>
+            <div class="polje">
+                <i data-lucide="user-round"></i>
+                <input type="text" placeholder="ime" required>
+            </div>
+            <div class="polje">
+                <i data-lucide="user-round"></i>
+                <input type="text" placeholder="prezime" required>
+            </div>
+            <div class="polje">
+                <i data-lucide="mail"></i>
+                <input type="email" placeholder="e-mail" required>
+            </div>
+            <div class="polje">
+                <i data-lucide="lock"></i>
+                <input type="password" placeholder="lozinka" required>
+            </div>
+            <div class="polje">
+                <i data-lucide="phone"></i>
+                <input type="tel" placeholder="telefon" required>
+            </div>
+            <button type="submit" class="modal-btn">Nastavi</button>
+        </form>
+    </dialog>
+
+    <dialog id="cart-dialog">
+        <div class="cart-head">
+            <h3>Korpa</h3>
+            <span id="cart-count">0</span>
+        </div>
+        <div class="cart-box">
+            <div id="cart-items"></div>
+            <p class="cart-total">Ukupna cena : <span id="cart-total">0 RSD</span></p>
+        </div>
+        <button type="button" class="cart-clear">Isprazni</button>
+    </dialog>
+
     <script src="https://unpkg.com/lucide@latest"></script>
     <script>
         lucide.createIcons();
